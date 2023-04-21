@@ -230,8 +230,8 @@ fun TextFieldWithIcons(viewModel: MainViewModel) {
         onValueChange = {
             text = it
         },
-        label = { Text(text = "Enter City (┛◉Д◉)┛彡┻━┻") },
-        placeholder = { Text(text = "Enter City (┛◉Д◉)┛彡┻━┻") },
+        label = { Text(text = "Enter City") },
+        placeholder = { Text(text = "Enter City") },
         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
         keyboardActions = KeyboardActions(
             onDone = {
