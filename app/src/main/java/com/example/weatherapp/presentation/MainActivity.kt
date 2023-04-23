@@ -89,6 +89,7 @@ class MainActivity : ComponentActivity() {
 fun WeatherAppLayout2(weather: Weather?, weatherType: WeatherType?, viewModel: MainViewModel) {
 
     Scaffold(
+
         content = {
             Column(
                 modifier = Modifier
@@ -249,30 +250,3 @@ fun fetchWeatherForCity(city: String,viewModel: MainViewModel) {
 }
 
 
-//used for testing displaying of weather data
-/*
-@Composable
-fun Greeting(name: String, weather: Weather?) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        if (weather == null) {
-            Text("Loading weather...")
-        } else {
-            Text("Current temperature: ${weather.temp}")
-            Text("UV index: ${weather.uv}")
-            Text("Wind speed: ${weather.wind_spd}")
-            // Text("Precipitation: ${weather.percip}") // There is no percip field in the Weather data class
-            Text("Relative humidity: ${weather.rh}")
-            Text("Feels like: ${weather.app_temp}")
-            Text("Weather code: ${weather.code}")
-        }
-    }
-
-    Text(text = "Hello $name!")
-}
-*/
