@@ -8,6 +8,7 @@ import com.example.weatherapp.api.model.Data
 
 class WeatherNetworkMapper : DomainMapper<WeatherDto, Weather> {
 
+    //function to map data from API to Weather Object to be used in the app
     override fun mapToDomainModel(model: WeatherDto): Weather {
         val firstData = model.weatherData.firstOrNull()
         return if (firstData != null) {
@@ -34,7 +35,6 @@ class WeatherNetworkMapper : DomainMapper<WeatherDto, Weather> {
         }
     }
     //We need this to switch between cities and store them in repo
-    //Search function is broken so this doesn't get utilized right now
     override fun mapFromDomainModel(domainModel: Weather): WeatherDto {
         return WeatherDto(
             weatherData = listOf(
